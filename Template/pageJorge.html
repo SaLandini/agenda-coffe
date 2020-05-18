@@ -1,0 +1,49 @@
+{% extends "Model_P.html" %}
+
+{% block content %}
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+        p {
+                font-family: 'VT323', monospace;
+                font-size: larger;
+        }
+        ol {
+                font-family: 'VT323', monospace;
+                font-size: large;
+        }
+        h1 {
+                font-family: 'Press Start 2P', monospace;
+                font-size: larger;
+                vertical-align: bottom;
+        }
+        .tv {   
+                background-color: whitesmoke;
+                border-style: solid;
+                border-color: black;
+                border-radius: 10px;
+                margin-left: 700px;
+                margin-right: 800px;
+        }
+        
+</style>
+        <h1>Organização</h1>
+        <p>Essa Semana Você tem:</p>
+
+        <div class="tv">
+        {% for i in need %}
+                <ol>
+                        <div align="center">
+                                <P><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/{{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                </ol>
+        {%endfor%}
+        </div>
+
+        <a href="Create"><button>Mudar Tudo</button></a>
+{% endblock %}

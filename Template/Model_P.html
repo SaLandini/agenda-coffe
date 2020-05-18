@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html {
+            background-color: #fbf1c7;
+        }
+        button, a {
+            background-color: whitesmoke;
+            border: 2px;
+            border-style: solid;
+            border-color: rgb(122, 118, 112);
+            border-radius: 5px;
+            font-family: VT323;
+            font-weight: 300;
+        }
+    </style>
+    <head>
+        {% include "Model_Header.html" %}
+    </head>
+    <body>
+        {% block content %}
+        
+        {% endblock %}
+        {% include "Model_Footer.html" %}
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "Model_P.html" %}
+
+{% block content %}
+
+    <h2>Novo evento</h2>
+
+    <form action="submit" method="post">{% csrf_token %}
+        <input type="number" name="id_evento" value="{{need.id}}" hidden>
+        <label>Titulo:</label><br>
+            <input type="text" name="titulo" size="23" value="{{ need.titulo }}"><br>
+        <label>Periodo:</label><br>
+            <select name="time">
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+        <button type="submit">Fazer</button>
+        <a href="/">
+            <button type="button">Cancelar</button>
+        </a>
+    </form>
+{% endblock %}
