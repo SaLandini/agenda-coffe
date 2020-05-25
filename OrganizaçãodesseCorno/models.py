@@ -17,3 +17,9 @@ class what_I_need_to_do(models.Model):
         
     def ti_me(self):
         return self.time
+
+class etec_tarefas(models.Model):
+    materia = models.CharField(max_length=100)
+    dia_entrega = models.CharField(max_length=10, blank=True, null=True)
+    class Meta:
+        db_table = 'etec'

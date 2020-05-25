@@ -26,26 +26,24 @@
         }
         
 </style>
-<div>
+ <div>
         <div>
             <a href="/"><button><h1>Organização</h1></button></a><a href="/AgendaTOP/Etec"><button><h1>Tarefas Etec</h1></button></a>
-            <p>Essa Semana Você tem:</p>
+            <p>Tarefas da Etec que foram passadas:</p>
         </div>
-
         <div class="tv">
-        {% for i in need %}
-                 <div align="center">
-                        <p><b>
-                                {{ i.time }}
-                        </b></p>
-                        <li align="center">
-                                {{ i.titulo}} <br>
+        {% for i in etec %}
+                        <div align="center">
+                                <p><b>
+                                    {{ i.materia }}
+                                </b></p>
+                                <li align="center">{{ i.dia_entrega}} <br>
                                 <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/{{ i.id }}">Apagar</a>
-                        </li>
+                    </li>
                 </div>
         {%endfor%}
         </div>
+        <a href="/AgendaTOP/Etec/Create"><button>Mudar/Adicionar</button></a>
+ </div>
 
-        <a href="Create"><button>Mudar/Adicionar</button></a>
-</div>
-{% endblock %}
+ {% endblock %}
