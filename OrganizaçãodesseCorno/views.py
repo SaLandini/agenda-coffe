@@ -65,6 +65,5 @@ def Etec_subcreate(request):
                                                         dia_entrega = dia_entrega,)
         else:
             etec_tarefas.objects.create(materia=materia,
-                                dia_entrega = dia,
-                                usuario=usuario)
+                                dia_entrega = dia_entrega)
     return redirect('/AgendaTOP/Etec/')
