@@ -26,6 +26,9 @@ urlpatterns = [
     path('AgendaTOP/Etec/Create/submit', views.Etec_subcreate),
     path('AgendaTOP/Create/', views.create),
     path('AgendaTOP/Create/submit', views.submit_evento),
-    path('AgendaTOP/delete/<int:id_evento>', views.delete_evento),
+    path('AgendaTOP/delete/<int:id>', views.delete_evento),
+    path('AgendaTOP/Notas/', views.Notas),
+    path('AgendaTOP/Notas/Create/', views.Create_notas),
+    path('AgendaTOP/Notas/Create/submit', views.Submit_notas),
     path('', RedirectView.as_view(url='/AgendaTOP/')),
 ]

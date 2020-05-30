@@ -23,3 +23,10 @@ class etec_tarefas(models.Model):
     dia_entrega = models.CharField(max_length=10, blank=True, null=True)
     class Meta:
         db_table = 'etec'
+
+class Anotas(models.Model):
+    notas = models.CharField(max_length=100)
+    descri = models.TextField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'nota'
