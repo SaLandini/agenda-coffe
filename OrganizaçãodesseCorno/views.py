@@ -33,8 +33,6 @@ def submit_evento(request):
                                    usuario=usuario)
     return redirect('/')
 
-
-
 def Etec(request):
     usuario = request.user
     materia = etec_tarefas.materia
@@ -95,3 +93,4 @@ def Submit_notas(request):
             Anotas.objects.create(notas=anotação,
                                 descri=descri)
         return redirect('/AgendaTOP/Notas')
+
