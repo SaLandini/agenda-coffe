@@ -7,9 +7,15 @@
                 font-family: 'VT323', monospace;
                 font-size: larger;
         }
-        td {
+        
+        li {
                 font-family: 'VT323', monospace;
                 font-size: medium;
+                list-style: none;
+                background-color:rgb(230, 240, 248);
+                widght: 250px;
+                border-radius: 10px ;
+                margin: 1.5px 5px 10px;
         }
         h1, h2 {
                 font-family: 'Press Start 2P', monospace;
@@ -18,36 +24,41 @@
         }
         .tv {   
                 background-color: whitesmoke;
-                border-style: solid;
-                border-color: black;
                 border-radius: 10px;
                 margin-left: 700px;
                 margin-right: 700px;
         }
-        .all {
-                overflow-y: scroll;
-                background-color: #fbf1c7;
+        .ol{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+                text-align: center;
         }
-
+        .but {
+                margin-top:40px;
+        }
 </style>
  <div class="all">
-        <div>
+        <div class="move">
             <a href="/"><button><h1>Organização</h1></button></a><a href="/AgendaTOP/Etec"><button><h1>Tarefas Etec</h1></button></a><a href="/AgendaTOP/Notas"><button><h1>Notas</h1></button></a>
             <p>Tarefas da Etec que foram passadas:</p>
         </div>
         <table class="tv">
-        {% for i in etec %}
-                        <tr align="center">
-                                <td><p><b>
-                                    {{ i.materia }}
-                                </b></p></td>
-                                <td align="center">{{ i.dia_entrega}} <br>
-                                <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/{{ i.id }}">Apagar</a>
-                    </td>
-                </tr>
-        {%endfor%}
+                <div class="ol">
+                        {% for i in etec %}
+                                <li>
+                                        <p><b>
+                                        {{ i.materia }}
+                                        </b></p>
+                                        {{ i.dia_entrega}}
+                                        <a href="Create/?id={{ i.id }}">Editar</a>
+                                </li>
+                        {%endfor%}
+                </div>
         </table>
-        <a href="/AgendaTOP/Etec/Create"><button>Mudar/Adicionar</button></a>
+        <div class="but">
+                <a href="/AgendaTOP/Etec/Create"><button>Mudar/Adicionar</button></a>
+        </div>
  </div>
 
  {% endblock %}

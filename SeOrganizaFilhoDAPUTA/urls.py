@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from OrganizaçãodesseCorno import views
 from django.views.generic import RedirectView
+from OrganizaçãodesseCorno import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +30,4 @@ urlpatterns = [
     path('AgendaTOP/Notas/Create/', views.Create_notas),
     path('AgendaTOP/Notas/Create/submit', views.Submit_notas),
     path('', RedirectView.as_view(url='/AgendaTOP/')),
-]
+] 

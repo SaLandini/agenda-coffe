@@ -17,31 +17,91 @@
                 vertical-align: bottom;
         }
         .tv {   
-                background-color: whitesmoke;
-                border-style: solid;
-                border-color: black;
-                border-radius: 10px;
-                margin-left: 700px;
-                margin-right: 700px;
+                display: grid;
+                grid-template-rows: 5fr 5fr 5fr 5fr 5fr;
+                grid-template-columns: 1fr 1fr 1fr; 
+                gap: 16px;
+                padding-right: auto;
+
+        }
+        .Manhã{
+                display: grid;
+                background-color: rgb(230, 240, 248);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+        .Tarde{
+                display: grid;
+                background-color: rgb(116, 142, 161);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+        .Noite{
+                display: grid;
+                background-color: rgb(57, 68, 77);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                color: rgb(255, 255, 255);
+                border-radius: 18px;
         }
 </style>
 <div class="all">
-        <div>
+        <div class="move">
             <a href="/"><button><h1>Organização</h1></button></a><a href="/AgendaTOP/Etec"><button><h1>Tarefas Etec</h1></button></a><a href="/AgendaTOP/Notas"><button><h1>Notas</h1></button></a>
-            <p>Essa Semana Você tem:</p>
         </div>
-
+        <p>Essa Semana Você tem:</p>
         <div class="tv">
         {% for i in need %}
-                 <div align="center">
-                        <p><b>
-                                {{ i.time }}
-                        </b></p>
-                        <li align="center">
-                                {{ i.titulo}} <br>
-                                <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
-                        </li>
-                </div>
+                {% if i.time == 'Manhã'%}
+                        <div class="{{ i.time }}">
+                                <p><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                {%endif%}
+                {% if i.time == 'Tarde'%}
+                        <div class="{{ i.time }}">
+                                <p><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                {%endif%}
+                {% if i.time == 'Noite'%}
+                        <div class="{{ i.time }}">
+                                <p><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                {%endif%}
         {%endfor%}
         </div>
 
