@@ -1,5 +1,5 @@
 from django.contrib import admin
-from OrganizaçãodesseCorno.models import what_I_need_to_do, etec_tarefas, Anotas
+from agenda_coffe.models import what_I_need_to_do, etec_tarefas, Anotas
 # Register your models here.
 
 class EventoAdmin(admin.ModelAdmin):

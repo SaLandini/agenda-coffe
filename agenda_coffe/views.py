@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 from datetime import datetime, timedelta
-from OrganizaçãodesseCorno.models import what_I_need_to_do, etec_tarefas, Anotas
+from agenda_coffe.models import (
+    what_I_need_to_do,
+    etec_tarefas,
+    Anotas
+)
 
 # Create your views here.
 def Jorge(request):

@@ -1,4 +1,4 @@
-"""SeOrganizaFilhoDAPUTA URL Configuration
+"""AGENDA COFFE URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import RedirectView
-from OrganizaçãodesseCorno import views
+from agenda_coffe import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
