@@ -29,5 +29,9 @@ urlpatterns = [
     path('AgendaTOP/Notas/', views.Notas),
     path('AgendaTOP/Notas/Create/', views.Create_notas),
     path('AgendaTOP/Notas/Create/submit', views.Submit_notas),
+    path('AgendaTOP/Estudos/', views.Studies),
+    path('AgendaTOP/Estudos/Create', views.Create_studies),
+    path('AgendaTOP/Estudos/Create/submit', views.Submit_studies),
+    path('AgendaTOP/Estudos/submit', views.Submit_studies),
     path('', RedirectView.as_view(url='/AgendaTOP/')),
 ] 

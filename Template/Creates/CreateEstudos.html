@@ -1,0 +1,22 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+
+    <h2>Qual a boa?</h2>
+
+    <form action="submit" method="post">{% csrf_token %}
+        <input type="number" name="id_studies" value="{{studi.id}}" hidden>
+        <label>Nome do Curso:</label><br>
+            <input type="text" name="curso_name" size="23" value="{{ studi.curso_name }}"><br>
+        <label>Link:</label><br>
+            <input type="text" name="curso_link" value="{{ studi.curso_link }}"><br>
+        <label>Site:</label><br>
+            <input type="text" name="curso_site" value="{{ studi.curso_site_name }}"><br>
+        <label>Youtube:</label><br>
+            <input type="checkbox" name="Youtube" value=" "{% if studi.youtube %}checked{% endif %}><br>
+        <button type="submit">Fazer</button>
+        <a href="/">
+            <button type="button">Cancelar</button>
+        </a>
+    </form>
+{% endblock %}

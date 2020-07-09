@@ -1,0 +1,94 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+<style>
+        .tv {   
+                display: grid;
+                grid-template-rows: 5fr 5fr 5fr 5fr 5fr;
+                grid-template-columns: 1fr 1fr 1fr; 
+                gap: 16px;
+                padding-right: auto;
+
+        }
+        .Manhã{
+                display: grid;
+                background-color: rgb(230, 240, 248);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+        .Tarde{
+                display: grid;
+                background-color: rgb(116, 142, 161);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+        .Noite{
+                display: grid;
+                background-color: rgb(57, 68, 77);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                color: rgb(255, 255, 255);
+                border-radius: 18px;
+        }
+</style>
+<div class="all">
+        
+        <p>Essa Semana Você tem:</p>
+        <div class="tv">
+        {% for i in need %}
+                {% if i.time == 'Manhã'%}
+                        <div class="{{ i.time }}">
+                                <p><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                {%endif%}
+                {% if i.time == 'Tarde'%}
+                        <div class="{{ i.time }}">
+                                <p><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                {%endif%}
+                {% if i.time == 'Noite'%}
+                        <div class="{{ i.time }}">
+                                <p><b>
+                                        {{ i.time }}
+                                </b></p>
+                                <li align="center">
+                                        {{ i.titulo}} <br>
+                                        <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                                </li>
+                        </div>
+                {%endif%}
+        {%endfor%}
+        </div>
+
+        <a href="Create"><button>Mudar/Adicionar</button></a>
+</div>
+{% endblock %}

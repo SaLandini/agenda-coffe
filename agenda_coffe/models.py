@@ -21,12 +21,25 @@ class what_I_need_to_do(models.Model):
 class etec_tarefas(models.Model):
     materia = models.CharField(max_length=100)
     dia_entrega = models.CharField(max_length=10, blank=True, null=True)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+
     class Meta:
         db_table = 'etec'
 
 class Anotas(models.Model):
     notas = models.CharField(max_length=100)
     descri = models.TextField(blank=True, null=True)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'nota'
+
+class Estudos(models.Model):
+    youtube = models.BooleanField(editable=True)
+    curso_link = models.CharField(max_length=200)
+    curso_name = models.CharField(max_length=200)
+    curso_site_name = models.CharField(max_length=200)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'cursos'

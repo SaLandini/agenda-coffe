@@ -1,0 +1,18 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+
+    <h2>Novo evento</h2>
+
+    <form action="submit" method="post">{% csrf_token %}
+        <input type="number" name="id_materia" value="{{etec.id}}" hidden>
+        <label>Materia:</label><br>
+            <input type="text" name="materia" size="23" value="{{ etec.materia }}"><br>
+        <label>Dia da entrega</label><br>
+            <input type="text" name="dia_entrega" value="{{ etec.dia_entrega }}">            
+        <button type="submit">Fazer</button>
+        <a href="/">
+            <button type="button">Cancelar</button>
+        </a>
+    </form>
+{% endblock %}

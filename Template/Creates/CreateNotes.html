@@ -1,0 +1,18 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+
+    <h2>Qual a nota do dia?</h2>
+
+    <form action="submit" method="post">{% csrf_token %}
+        <input type="number" name="id_notas" value="{{notas.id}}" hidden>
+        <label>Nota:</label><br>
+            <input type="text" name="anotação" size="23" value="{{ notas.notas }}"><br>
+        <label>Descrição:</label><br>
+            <input type="text" name="descri" value="{{ notas.descri }}">            
+        <button type="submit">Fazer</button>
+        <a href="/">
+            <button type="button">Cancelar</button>
+        </a>
+    </form>
+{% endblock %}
