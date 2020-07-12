@@ -31,20 +31,18 @@
         }
 </style>
  <div class="all">
-        <p>Tarefas da Etec que foram passadas:</p>
-        <table class="tv">
-                <div class="ol">
-                        {% for i in etec %}
-                                <li>
-                                        <p><b>
-                                        {{ i.materia }}
-                                        </b></p>
-                                        {{ i.dia_entrega}}
-                                        <a href="Create/?id={{ i.id }}">Editar</a>
-                                </li>
-                        {%endfor%}
-                </div>
-        </table>
+        <p>Tarefas da Etec que foram passadas:</p>        
+        <div class="ol">
+                {% for i in etec %}
+                        <li>
+                                <p><b>
+                                {{ i.materia }}
+                                </b></p>
+                                {{ i.dia_entrega}}
+                                <a href="Create/?id={{ i.id }}">Editar</a>
+                        </li>
+                {%endfor%}
+        </div>
         <div class="but">
                 <a href="/AgendaTOP/Etec/Create"><button>Mudar/Adicionar</button></a>
         </div>

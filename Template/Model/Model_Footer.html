@@ -1,36 +1,52 @@
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&display=swap');
-.a{
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-.id {
-    font-family: 'Press Start 2P';
-    font-size: larger;
-    align-items: center;
-    color: whitesmoke;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-#img {
-    border-radius: 20px;
-}
-.a img{
-    vertical-align: middle;
-}
-#j {
-    font-family: VT323;
-    vertical-align: text-top;
-    color: white;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&display=swap');
+    .a{
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: grid;
+        align-items: center;
+    }
+    .a img{
+        vertical-align: middle;
+    }
+    .a buttom {
+        font-family: 'Press Start 2P';
+        align: center;
+        justify-self: center;
+    }
+    .id {
+        font-family: 'Press Start 2P';
+        font-size: larger;
+        align-items: center;
+        color: whitesmoke;
+        position: relative;
+    }
+    #img {
+        border-radius: 20px;
+    }
+    
+    .j {
+        font-family: VT323;
+        vertical-align: text-top;
+        color: white;
+    }
+    @media (max-width: 900px) {
+        .a {
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+    @media (min-width: 901px) {
+        .a {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 </style>
-<div class="a">
-    <p class="id" align="center">CONFIA QUE O PAI É BRABO EM TUDO, MENOS NO SQL</p>
-    <p id="j"><img id="img" src="https://cdn.discordapp.com/attachments/699296519928414220/709466322781601832/IMG_20200429_192126_720.jpg" width="40" height="40" float="center"> MADE BY: Rafael Salandin Moraes  <br>
+<div class="a">    
+    <p class="j"><img id="img" src="https://cdn.discordapp.com/attachments/699296519928414220/709466322781601832/IMG_20200429_192126_720.jpg" width="40" height="40" float="center"> MADE BY: Rafael Salandin Moraes  <br>
        Redes: <a href="https://github.com/SaLandini">GitHub</a><a href="https://www.instagram.com/salandin.xr/?hl=pt-br">Istagram</a><a href="https://twitter.com/RafaSalandinM">Twitter</a></p>
+    <p class="id">CONFIA QUE O PAI É BRABO EM TUDO, MENOS NO SQL</p>
+    <buttom><a href="/">Voltar para home</a></buttom>
 </div>

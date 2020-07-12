@@ -7,6 +7,12 @@ from agenda_coffe.models import (
     Anotas,
     Estudos
 )
+"""
+    Pagina Inicial
+"""
+
+def Init(request):
+    return render(request, 'pages/pageInit.html')
 
 """
     Organização da semana
