@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Press+Start+2P&display=swap');
+.a{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    align-items: center;
+}
+.a img{
+    vertical-align: middle;
+}
+.a buttom {
+    font-family: 'Press Start 2P';
+    align: center;
+    justify-self: center;
+}
+.id {
+    font-family: 'Press Start 2P';
+    font-size: larger;
+    align-items: center;
+    color: whitesmoke;
+    position: relative;
+}
+#img {
+    border-radius: 20px;
+}
+
+.j {
+    font-family: VT323;
+    vertical-align: text-top;
+    color: white;
+}
+@media (max-width: 900px) {
+    .a {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 901px) {
+    .a {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

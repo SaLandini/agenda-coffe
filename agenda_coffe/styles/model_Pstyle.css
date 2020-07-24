@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+html {
+    background-color: rgba(187, 199, 209, 0.452);
+}
+button {
+    background-color: whitesmoke;
+    border: 2px;
+    border-radius: 5px;
+    font-family: VT323;
+    font-weight: 300;
+    margin: 0px 3.5px 0px 3.5px;
+}
+button:hover {
+    background-color: rgb(196, 164, 164);
+    border: 2px;
+    border-radius: 5px;
+    font-family: VT323;
+    font-weight: 300;
+}
+a {
+    background-color: rgb(183, 188, 192);
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.move a{
+    background-color: whitesmoke;
+    border: 2px;
+    border-radius: 5px;
+    font-family: VT323;
+    font-weight: 300;
+    margin: 0px 3.5px 0px 3.5px;
+}
+p {
+    font-family: 'VT323', monospace;
+    font-size: larger;
+}
+li {
+    font-family: 'VT323', monospace;
+    font-size: large;
+}
+h1, h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: larger;
+    vertical-align: bottom;
+}
+.tv {
+    display: grid;
+    grid-template-rows: 5fr 5fr 5fr 5fr 5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding-right: auto;
+
+}
