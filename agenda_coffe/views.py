@@ -22,7 +22,7 @@ def Init(request):
 def semana(request):
      usuario = request.user
      horario = Semana.time
-     if Semana.usuario == usuario:
+     if Semana.usuario != None :
         evento = Semana.objects.filter(usuario=usuario)
         dados = {'week':evento}
      else:
@@ -51,7 +51,7 @@ def submit_evento(request):
             Semana.objects.create(titulo=titulo,
                                    time = time,
                                    usuario=usuario)
-    return redirect('/Semana')
+    return redirect('/')
 
 """
     Tarefas
@@ -62,7 +62,7 @@ def tarefas(request):
     usuario = request.user
     materia = Tarefas.materia
     dia = Tarefas.dia_entrega
-    if Tarefas.usuario == usuario:
+    if Tarefas.usuario != None:
         tarefas = Tarefas.objects.filter(usuario=usuario)
         dados_etec = {'homework': tarefas}
     else:
@@ -91,7 +91,7 @@ def tarefas_subcreate(request):
             Tarefas.objects.create(materia=materia,
                                 dia_entrega = dia_entrega,
                                 usuario = usuario)
-    return redirect('Tarefas/')
+    return redirect('/')
 
 """
     Notas
@@ -102,7 +102,7 @@ def notas(request):
     usuario = request.user
     anotação = Anotas.notas
     descri = Anotas.descri
-    if Anotas.usuario == usuario:
+    if Anotas.usuario != None:
         notas = Anotas.objects.filter(usuario=usuario)
         dados_notas = {'nota':notas}
     else:
@@ -132,7 +132,7 @@ def submit_notas(request):
             Anotas.objects.create(notas=anotação,
                                 descri=descri,
                                 usuario = user)
-        return redirect('/Notas')
+        return redirect('/')
 
 """
  Estudos
@@ -144,7 +144,7 @@ def studies(request):
     curso_name = Estudos.curso_name
     curso_link = Estudos.curso_link
     curso_site = Estudos.curso_site_name
-    if Estudos.usuario == usuario:
+    if Estudos.usuario != usuario:
         evento = Estudos.objects.filter(usuario=usuario)
         dados = {'studi':evento}
     else:
@@ -183,4 +183,4 @@ def submit_studies(request):
                                     curso_site_name = curso_site,
                                     curso_name = curso_name,
                                     usuario = user)
-        return redirect('Estudos/')
+        return redirect('/')
