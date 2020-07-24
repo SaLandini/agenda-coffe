@@ -1,0 +1,83 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+<style>
+        .tv {   
+                display: grid;
+                grid-template-rows: 5fr 5fr 5fr 5fr 5fr;
+                grid-template-columns: 1fr 1fr 1fr; 
+                gap: 16px;
+                padding-right: auto;
+
+        }
+        .Manhã{
+                display: grid;
+                background-color: rgb(230, 240, 248);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+        .Tarde{
+                display: grid;
+                background-color: rgb(116, 142, 161);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+        .Noite{
+                display: grid;
+                background-color: rgb(57, 68, 77);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                color: rgb(255, 255, 255);
+                border-radius: 18px;
+        }
+</style>
+<div class="all">
+        
+        <p>Essa Semana Você tem:</p>
+        <div class="tv">
+                <div class="Manhã">
+                        <p><b>
+                            Manhã
+                        </b></p>
+                        <li align="center">
+                            Mussum Ipsum, cacilds vidis litro abertis. <br>
+                            <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                        </li>
+                </div>
+                <div class="Tarde">
+                        <p><b>
+                            Tarde
+                        </b></p>
+                        <li align="center">
+                            Mussum Ipsum, cacilds vidis litro abertis. <br>
+                            <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                        </li>
+                </div><div class="Noite">
+                        <p><b>
+                            Noite
+                        </b></p>
+                        <li align="center">
+                            Mussum Ipsum, cacilds vidis litro abertis. <br>
+                            <a href="Create/?id={{ i.id }}">Editar</a>  <a href="delete/?id={{ i.id }}">Apagar</a>
+                        </li>
+            </div>                               
+        </div>
+</div>
+{% endblock %}

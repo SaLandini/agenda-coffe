@@ -1,0 +1,46 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+<style>
+       .tv {   
+                background-color: whitesmoke;
+                border-radius: 10px;
+                margin-left: 700px;
+                margin-right: 700px;
+        }
+        .ol{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+                text-align: center;
+        }
+        .but {
+                margin-top:40px;
+        }
+        .ol li{
+                display: grid;
+                background-color: rgb(230, 240, 248);
+                padding: 10px 10px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                list-style: none;
+                border-radius: 18px;
+        }
+</style>
+ <div class="all">
+        <p>Tarefas da Etec que foram passadas:</p>        
+        <div class="ol">
+            <li>
+                        <p><b>
+                        Mussum Latinus
+                        </b></p>
+                        01/01/0001
+                    <a href="Create/?id={{ i.id }}">Editar</a>
+            </li>
+        </div>
+ </div>
+
+ {% endblock %}

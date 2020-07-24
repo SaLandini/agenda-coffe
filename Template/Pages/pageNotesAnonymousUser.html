@@ -1,0 +1,37 @@
+{% extends "Model/Model_P.html" %}
+
+{% block content %}
+<style>
+        li {
+                font-family: 'VT323', monospace;
+                font-size: medium;
+                list-style: none;
+                background-color: rgba(238, 232, 143, 0.904);
+                widght: 250px;
+                border-bottom: solid 7.5px rgba(241, 227, 30, 0.904);
+                border-radius: 15px 15px 0 0 ;
+                margin: 1.5px 5px 10px;
+        }
+        .ol{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+                text-align: center;
+        }
+</style>
+ <div class="all">
+        <p>Notas são:</p>
+        <table class="tv">
+                <div class="ol">
+                                        <li>
+                                                <p><b>
+                                                Mussum Ipsum,
+                                                </b></p> <br>
+                                                <p>Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Casamentiss faiz malandris se pirulitá. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Si num tem leite então bota uma pinga aí cumpadi!</p><br>
+                                                <a href="Create/?id={{ i.id }}">Editar</a>
+                                        </li>
+                </div>
+        </table>
+ </div>
+
+ {% endblock %}

@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from datetime import datetime
 
 # Create your models here.
-class what_I_need_to_do(models.Model):
+
+
+class Semana(models.Model):
     titulo = models.CharField(max_length=100)
     descrição = models.TextField(blank=True, null=True)
     time = models.CharField(max_length=100, default='SOME STRING')
@@ -18,13 +20,15 @@ class what_I_need_to_do(models.Model):
     def ti_me(self):
         return self.time
 
-class etec_tarefas(models.Model):
+
+class Tarefas(models.Model):
     materia = models.CharField(max_length=100)
     dia_entrega = models.CharField(max_length=10, blank=True, null=True)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'etec'
+
 
 class Anotas(models.Model):
     notas = models.CharField(max_length=100)
@@ -33,6 +37,7 @@ class Anotas(models.Model):
 
     class Meta:
         db_table = 'nota'
+
 
 class Estudos(models.Model):
     youtube = models.BooleanField(editable=True)
