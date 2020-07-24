@@ -12,7 +12,7 @@ from agenda_coffe.models import (
 """
 
 def Init(request):
-    return render(request, 'pages/pageInit.html')
+    return render(request, "Pages/pageInit.html")
 
 """
     Organização da semana

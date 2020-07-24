@@ -1,53 +1,9 @@
 {% extends "Model/Model_P.html" %}
 
 {% block content %}
-<style>
-        .tv {   
-                display: grid;
-                grid-template-rows: 5fr 5fr 5fr 5fr 5fr;
-                grid-template-columns: 1fr 1fr 1fr; 
-                gap: 16px;
-                padding-right: auto;
 
-        }
-        .Manhã{
-                display: grid;
-                background-color: rgb(230, 240, 248);
-                padding: 10px 10px 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                list-style: none;
-                border-radius: 18px;
-        }
-        .Tarde{
-                display: grid;
-                background-color: rgb(116, 142, 161);
-                padding: 10px 10px 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                list-style: none;
-                border-radius: 18px;
-        }
-        .Noite{
-                display: grid;
-                background-color: rgb(57, 68, 77);
-                padding: 10px 10px 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                list-style: none;
-                color: rgb(255, 255, 255);
-                border-radius: 18px;
-        }
-</style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/style_pages/Semanastyle.css' %}">
 <div class="all">
         
         <p>Essa Semana Você tem:</p>

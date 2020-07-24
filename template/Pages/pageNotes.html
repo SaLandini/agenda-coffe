@@ -1,25 +1,10 @@
 {% extends "Model/Model_P.html" %}
 
 {% block content %}
-<style>
-        li {
-                font-family: 'VT323', monospace;
-                font-size: medium;
-                list-style: none;
-                background-color: rgba(238, 232, 143, 0.904);
-                widght: 250px;
-                border-bottom: solid 7.5px rgba(241, 227, 30, 0.904);
-                border-radius: 15px 15px 0 0 ;
-                margin: 1.5px 5px 10px;
-        }
-        .ol{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-content: center;
-                text-align: center;
-        }
-</style>
- <div class="all">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/style_pages/Notesstyle.css' %}">
+<div class="all">
         <p>Notas são:</p>
         <table class="tv">
                 <div class="ol">
@@ -36,6 +21,6 @@
                 </div>
         </table>
         <a href="/AgendaTOP/Notas/Create"><button>Mudar/Adicionar</button></a>
- </div>
+</div>
 
  {% endblock %}
