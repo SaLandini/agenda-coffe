@@ -22,12 +22,13 @@ def Init(request):
 def semana(request):
      usuario = request.user
      horario = Semana.time
-     if Semana.usuario != None :
+     try:
         evento = Semana.objects.filter(usuario=usuario)
         dados = {'week':evento}
-     else:
+        return render(request, 'Pages/pageSemana.html', dados)
+     except:
          return render(request, 'Pages/pageSemanaAnonymousUser.html')
-     return render(request, 'Pages/pageSemana.html', dados)
+
 
 
 def create(request):
@@ -62,12 +63,12 @@ def tarefas(request):
     usuario = request.user
     materia = Tarefas.materia
     dia = Tarefas.dia_entrega
-    if Tarefas.usuario != None:
+    try:
         tarefas = Tarefas.objects.filter(usuario=usuario)
         dados_etec = {'homework': tarefas}
-    else:
+        return render(request, 'Pages/pageTarefas.html', dados_etec)
+    except:
         return render(request, 'Pages/pageTarefasAnonymousUser.html')
-    return render(request,'Pages/pageTarefas.html', dados_etec)
 
 
 def tarefas_create(request):
@@ -102,12 +103,13 @@ def notas(request):
     usuario = request.user
     anotação = Anotas.notas
     descri = Anotas.descri
-    if Anotas.usuario != None:
+    try:
         notas = Anotas.objects.filter(usuario=usuario)
         dados_notas = {'nota':notas}
-    else:
+        return  render(request,'Pages/pageNotes.html',dados_notas)
+    except:
         return render(request, 'Pages/pageNotesAnonymousUser.html')
-    return  render(request,'Pages/pageNotes.html',dados_notas)
+
 
 
 def create_notas(request):
@@ -144,12 +146,13 @@ def studies(request):
     curso_name = Estudos.curso_name
     curso_link = Estudos.curso_link
     curso_site = Estudos.curso_site_name
-    if Estudos.usuario != usuario:
+    try:
         evento = Estudos.objects.filter(usuario=usuario)
         dados = {'studi':evento}
-    else:
+        return render(request, 'Pages/pageEstudos.html', dados)
+    except:
         return render(request, 'Pages/pageEstudosAnonymousUser.html')
-    return render(request, 'Pages/pageEstudos.html', dados)
+
 
 
 def create_studies(request):
