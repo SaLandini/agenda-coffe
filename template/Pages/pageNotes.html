@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="{% static 'styles/style_pages/Notesstyle.css' %}">
 <div class="all">
         <p>Notas são:</p>
-        <table class="tv">
                 <div class="ol">
                         {% for i in nota %}
                                 
@@ -19,8 +18,9 @@
                                         </li>
                         {%endfor%}
                 </div>
-        </table>
-        <a href="Create"><button>Mudar/Adicionar</button></a>
+        <div class="button">
+               <a href="Create"><button>Mudar/Adicionar</button></a>
+        </div>
 </div>
 
  {% endblock %}
