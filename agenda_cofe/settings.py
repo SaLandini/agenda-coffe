@@ -27,10 +27,11 @@ SECRET_KEY = '5#u_!a+*l6se2ylu)05@9s-6h=b4tb5o&eg56jki6exlbe9$uy'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '*',
     'http://3d533fbe8ef6.ngrok.io',
     'https://3d533fbe8ef6.ngrok.io',
     '3d533fbe8ef6.ngrok.io',
-    '127.0.0.1'
+    '127.0.0.1',
 ]
 
 
