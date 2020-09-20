@@ -6,31 +6,12 @@
     right: 0;
     left: 0;
     display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-}
-.a img{
-    vertical-align: middle;
+    padding: 10px;
 }
 .a buttom {
     font-family: 'Press Start 2P';
-    align: center;
-    justify-self: center;
-}
-.id {
-    font-family: 'Press Start 2P';
-    font-size: larger;
-    align-items: center;
-    color: whitesmoke;
-    position: relative;
-}
-#img {
-    border-radius: 20px;
-}
-
-.j {
-    font-family: VT323;
-    vertical-align: text-top;
-    color: white;
 }
 @media (max-width: 900px) {
     .a {
