@@ -38,4 +38,6 @@ urlpatterns = [
     path('AgendaCoffe/Estudos/', views.studies),
     path('AgendaCoffe/Estudos/Create', views.create_studies),
     path('AgendaCoffe/Estudos/submit', views.submit_studies),
+    #Remedios
+    path('Remedios', views.drugs)
 ] 

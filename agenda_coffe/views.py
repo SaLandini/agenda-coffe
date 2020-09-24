@@ -187,3 +187,11 @@ def submit_studies(request):
                                     curso_name = curso_name,
                                     usuario = user)
         return redirect('/')
+
+
+"""
+    Remedios
+"""
+
+def drugs(request):
+    return render(request, "Pages/pageDrugs.html")

@@ -1,0 +1,21 @@
+.manha, .tarde, .noite {
+    align-content: center;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#content {
+    background-color: lightgray;
+    width: 350px;
+    height: 90px;
+    border-radius: 10px;
+}
+#content li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#content li#init {
+    border-top: 10px solid lightgray;
+
+}
